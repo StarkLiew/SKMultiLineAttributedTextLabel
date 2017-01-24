@@ -1,6 +1,6 @@
-##SKMultiLineAttributedLabel
+##SKMultiLineAttributedTextLabel
 
-A simple solution to have Label with multiline and attributed text abilities with SpriteKit as like UILabel.
+A simple solution to have SKLabel with multiline and attributedText abilities with SpriteKit as like UILabel.
 
 ## Requirements
 
