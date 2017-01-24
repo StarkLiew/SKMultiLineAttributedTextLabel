@@ -1,5 +1,5 @@
 //
-//  SKMultiLineAttributedLabel.swift
+//  SKMultiLineAttributedTextLabel.swift
 //
 //
 //  Created by StarkLiew on 23/1/17.
@@ -9,7 +9,7 @@
 import SpriteKit
 
 
-class SKMultiLineAttributedLabel: SKNode{
+class SKMultiLineAttributedTextLabel: SKNode{
    
     public var text:String
     private var texts:[String] = []
