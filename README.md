@@ -9,7 +9,7 @@ A simple solution to have SKLabel with multiline and attributedText abilities wi
 
 ## Usage
 ```swift
-let myspritelabel = SKMultiLineAttributedLabel(text:"Peter Piper picked a peck of pickled pepper", width: 500, height: 700, color: UIColor.clear)
+let myspritelabel = SKMultiLineAttributedTextLabel(text:"Peter Piper picked a peck of pickled pepper", width: 500, height: 700, color: UIColor.clear)
 ```
 ## License
-`SKMultiLineAttributedLabel` is available under the MIT license. See the LICENSE file for more info.
+`SKMultiLineAttributedTextLabel` is available under the MIT license. See the LICENSE file for more info.
