@@ -39,11 +39,6 @@ class SKMultiLineAttributedLabel: SKNode{
     
     func makeLabel(){
         
-        //let TextWrap:SKShapeNode = SKShapeNode(rect: CGRect(x: self.frame.minX, y: self.frame.minY, width: self.frame.width, height: self.frame.height))
-        
-        //TextWrap.fillColor = self.spriteNode.color
-        
-        //self.addChild(TextWrap)
         
         for text in texts{
             
