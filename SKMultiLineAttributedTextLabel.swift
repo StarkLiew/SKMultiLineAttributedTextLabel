@@ -1,5 +1,5 @@
 //
-//  SKMultiLineAttributedTextLabel.swift
+//  SKMultiLineAttributedLabel.swift
 //
 //
 //  Created by StarkLiew on 23/1/17.
@@ -9,12 +9,13 @@
 import SpriteKit
 
 
-class SKMultiLineAttributedTextLabel: SKNode{
+class SKMultiLineAttributedLabel: SKNode{
    
     public var text:String
     private var texts:[String] = []
-    public var attibutedTexts:[SKLabelNode] = []
+    private var attibutedTexts:[SKLabelNode] = []
     public var spriteNode: SKSpriteNode
+
 
     
     init(text: String, width: CGFloat, height: CGFloat, color: UIColor){
@@ -32,23 +33,33 @@ class SKMultiLineAttributedTextLabel: SKNode{
     }
     
 
+
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func makeLabel(){
+    private func makeLabel(){
+        
+        //let TextWrap:SKShapeNode = SKShapeNode(rect: CGRect(x: self.frame.minX, y: self.frame.minY, width: self.frame.width, height: self.frame.height))
+        
+        //TextWrap.fillColor = self.spriteNode.color
+        
+        //self.addChild(TextWrap)
         
         
-        for text in texts{
+        for i in 0..<texts.count {
+        
             
-            let label = SKLabelNode(text: text)
+            let label = SKLabelNode(text: texts[i])
             label.color = UIColor.black
             label.fontSize = 60
             label.fontName = "Avenir-Heavy"
             label.fontColor = UIColor.white
             label.zPosition = 1
             label.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
+           
             self.attibutedTexts.append(label)
             
         }
@@ -80,6 +91,8 @@ class SKMultiLineAttributedTextLabel: SKNode{
             box.addChild(item)
             box.anchorPoint = CGPoint(x: 0.5, y: 0)
             
+            box.name = "label" + String(i)
+            
             
             self.spriteNode.addChild(box)
             nextX = nextX + item.frame.width + CGFloat(10)
@@ -91,9 +104,11 @@ class SKMultiLineAttributedTextLabel: SKNode{
         
 
     }
-
-
-
- 
+    
+    public func attributedText(index: Int) -> SKLabelNode{
+        return self.spriteNode.childNode(withName: "label" + String(index))?.children[0] as! SKLabelNode
+    }
 }
+
+
 
