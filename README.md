@@ -10,6 +10,10 @@ SpriteKit SKLabelNode with multiline and attributedText.
 ## Usage
 ```swift
 let myspritelabel = SKMultiLineAttributedTextLabel(text:"Peter Piper picked a peck of pickled pepper", width: 500, height: 700, color: UIColor.clear)
+
+self.addChild(myspritelabel)
+
+self.answerLabel.attributedText(index: 0).fontColor = UIColor.red
 ```
 ## License
 `SKMultiLineAttributedTextLabel` is available under the MIT license. See the LICENSE file for more info.
